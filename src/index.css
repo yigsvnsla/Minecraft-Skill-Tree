@@ -250,3 +250,40 @@ body {
 .pixel-corners::after {
   margin: -3px;
 }
+
+/* Tooltip z-index override - MENOR que los botones */
+[data-radix-popper-content-wrapper] {
+  z-index: 9998 !important;
+}
+
+/* Asegurar que los tooltips aparezcan DETRÁS de los botones */
+.tooltip-content {
+  position: fixed !important;
+  z-index: 9998 !important;
+}
+
+/* Skill tree button hierarchy - MÁXIMA PRIORIDAD */
+.skill-tree-node-button {
+  position: relative !important;
+  z-index: 99999 !important;
+}
+
+.skill-tree-node-button:hover {
+  z-index: 99999 !important;
+}
+
+/* Asegurar que el trigger del tooltip tenga prioridad ABSOLUTA */
+[data-radix-tooltip-trigger] {
+  z-index: 99999 !important;
+  position: relative !important;
+}
+
+[data-radix-tooltip-trigger]:hover {
+  z-index: 99999 !important;
+}
+
+/* Forzar que todos los elementos del botón estén encima */
+.skill-tree-node-button * {
+  position: relative !important;
+  z-index: 99999 !important;
+}
