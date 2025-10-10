@@ -12,8 +12,13 @@ export function SkillTreeContainer({
 	width,
 	height,
 }: SkillTreeContainerProps) {
-	const { viewport, setViewport, isDragging, handleMouseDown } =
-		useViewportDrag();
+	const {
+		viewport,
+		setViewport,
+		isDragging,
+		handleMouseDown,
+		handleTouchStart,
+	} = useViewportDrag();
 	const containerRef = useRef<HTMLDivElement>(null);
 
 	// Centrar el contenido inicialmente si no se ha movido
@@ -28,11 +33,14 @@ export function SkillTreeContainer({
 		}
 	}, [viewport.x, viewport.y, width, height, setViewport]);
 
+	const rootContainer = document.getElementById("root-container-skill-tree");
+
 	return (
 		<div
 			ref={containerRef}
-			className="relative w-full h-full mx-auto overflow-hidden select-none"
+			className="relative w-full h-full overflow-hidden select-none"
 			onMouseDown={handleMouseDown}
+			onTouchStart={handleTouchStart}
 			style={{
 				cursor: isDragging ? "grabbing" : "grab",
 				userSelect: "none", // Evitar selección de texto durante el arrastre
@@ -40,8 +48,8 @@ export function SkillTreeContainer({
 				backgroundRepeat: "repeat",
 				backgroundSize: "auto",
 				backgroundPosition: `${viewport.x}px ${viewport.y}px`,
-				maxWidth: `${Math.min(width, window.innerWidth * 0.6)}px`,
-				maxHeight: `${Math.min(height, window.innerHeight * 0.5)}px`,
+				maxWidth: `${Math.max(Math.min(width, window.innerWidth * 0.6), rootContainer?.clientWidth ?? 0)}px`,
+				maxHeight: `${Math.max(Math.min(height, window.innerHeight * 0.5), rootContainer?.clientHeight ?? 0)}px`,
 			}}
 			role="application"
 		>
