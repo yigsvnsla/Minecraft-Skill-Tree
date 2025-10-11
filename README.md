@@ -1,5 +1,9 @@
 # Proyecto: Árbol de Logros de Minecraft
 
+## 🌐 Demo en Vivo
+
+Puedes ver la aplicación en funcionamiento aquí: [https://minecraft-skill-tree-beta.vercel.app/](https://minecraft-skill-tree-beta.vercel.app/)
+
 ## Descripción
 
 Este proyecto es una réplica del Árbol de Logros de Minecraft. La aplicación fue desarrollada en React y gestiona el estado de los logros utilizando Redux. El árbol de logros se puede cargar desde un archivo JSON local o dinámicamente desde una URL externa mediante query parameters.
@@ -94,5 +98,32 @@ Si la URL proporcionada no es válida o no se puede cargar el JSON, la aplicaci�
 - **Vite**: Build tool y servidor de desarrollo
 - **Tailwind CSS**: Estilos
 - **Biome**: Linter y formatter
+- **Sonner**: Sistema de notificaciones toast
 
+## Posibles Mejoras
 
+### 🎨 Diseño del Toaster
+
+Actualmente se usa Sonner para las notificaciones, pero se podría mejorar:
+
+- Personalizar el diseño del toaster para que tenga un estilo más similar a Minecraft
+- Agregar bordes pixelados similares a los tooltips
+- Usar la paleta de colores de Minecraft (naranja para éxito, gris/azul para información)
+- Incorporar la fuente Minecraft en las notificaciones
+- Añadir efectos de sonido característicos de Minecraft al mostrar notificaciones
+
+### 📱 Mejor Soporte Mobile
+
+Optimizaciones pendientes para dispositivos móviles:
+
+- Mejorar las dimensiones del canvas y los nodos en pantallas pequeñas
+- Ajustar el tamaño de los tooltips para que sean más legibles en móviles
+- Optimizar el espaciado entre nodos para facilitar la navegación táctil
+- Implementar zoom mediante gestos pinch-to-zoom
+- Mejorar el rendimiento del arrastre en dispositivos de gama baja
+- Ajustar la interfaz para orientación vertical (portrait) en móviles
+- Reducir el tamaño de las imágenes de los nodos en resoluciones bajas
+
+### Otras Mejoras Potenciales
+
+- Animaciones al desbloquear logros
