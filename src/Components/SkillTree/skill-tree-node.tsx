@@ -41,11 +41,7 @@ export function SkillTreeNode({
 
 	return (
 		<TooltipProvider delayDuration={0}>
-			<Tooltip
-				delayDuration={0}
-				open={isHover}
-				onOpenChange={changeHover}
-			>
+			<Tooltip delayDuration={0} open={isHover} onOpenChange={changeHover}>
 				<TooltipTrigger asChild>
 					<ButtonSkillTreeNode
 						node={node}
@@ -64,8 +60,8 @@ export function SkillTreeNode({
 					sideOffset={-80}
 					className="p-0 group border-0 bg-transparent ring-0 pixel-corners-wrapper shadow-none z-[9998] overflow-visible"
 				>
-					<div className="relative pixel-corners  max-w-xs overflow-visible ">
-						<div className="absolute  group-data-[side=left]:right-[13px] top-[-9px] group-data-[side=right]:left-[13px] z-[99999]">
+					<div className="relative pixel-corners overflow-visible ">
+						<div className="absolute group-data-[side=left]:right-[13px] top-[-9px] group-data-[side=right]:left-[13px] z-[99999]">
 							<ButtonSkillTreeNode
 								node={node}
 								nodeId={node.id}
