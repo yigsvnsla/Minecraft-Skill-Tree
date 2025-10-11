@@ -12,10 +12,10 @@ Este proyecto es una réplica del Árbol de Logros de Minecraft. La aplicación 
 
 - ✨ Interfaz interactiva del árbol de habilidades estilo Minecraft
 - 🎮 Sistema de desbloqueo de logros progresivo
-- 📱 Diseño responsivo con soporte táctil para dispositivos móviles
+- 📱 Diseño responsivo con soporte táctil para dispositivos móviles (WIP)
 - 🔗 Carga dinámica de datos desde URLs externas
 - 🎵 Música de fondo opcional
-- 🖱️ Navegación por arrastre (drag) tanto con mouse como con gestos táctiles
+- 🖱️ Navegación por arrastre (drag) tanto con mouse como con gestos táctiles (WIP)
 
 ## Ejecución
 
